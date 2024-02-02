@@ -1,0 +1,276 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_signMessageLib",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "givenAddress",
+                "type": "address"
+            }
+        ],
+        "name": "InvalidAddress",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "InvalidCall",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SignMessageLibCallFailed",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "deployedAt",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "signMessageLib",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "space",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "timestamp",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "bytes32",
+                        "name": "proposal",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "uint32[]",
+                        "name": "choice",
+                        "type": "uint32[]"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "reason",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "app",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "metadata",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct SnapshotSigner.VoteArray",
+                "name": "vote",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "version",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct SnapshotSigner.Domain",
+                "name": "domain",
+                "type": "tuple"
+            }
+        ],
+        "name": "signSnapshotArrayVote",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "space",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "timestamp",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "bytes32",
+                        "name": "proposal",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "choice",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "reason",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "app",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "metadata",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct SnapshotSigner.VoteString",
+                "name": "vote",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "version",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct SnapshotSigner.Domain",
+                "name": "domain",
+                "type": "tuple"
+            }
+        ],
+        "name": "signSnapshotStringVote",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "from",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "space",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint64",
+                        "name": "timestamp",
+                        "type": "uint64"
+                    },
+                    {
+                        "internalType": "bytes32",
+                        "name": "proposal",
+                        "type": "bytes32"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "choice",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "reason",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "app",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "metadata",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct SnapshotSigner.Vote",
+                "name": "vote",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "version",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct SnapshotSigner.Domain",
+                "name": "domain",
+                "type": "tuple"
+            }
+        ],
+        "name": "signSnapshotVote",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
