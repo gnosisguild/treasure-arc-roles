@@ -23,7 +23,7 @@ const postPermissions = async (
     body: JSON.stringify({ targets, annotations }),
   });
   const json = await res.json();
-  const { hash } = json;
+  const { hash } = (json || {}) as any;
   if (!hash) {
     console.error("Unexpected response:", json);
     throw new Error("Failed to post permissions");
@@ -31,7 +31,9 @@ const postPermissions = async (
   return hash;
 };
 
-const hash = await postPermissions(permissions);
-const diffUrl = `${ZODIAC_ROLES_APP}/${CHAIN_PREFIX}:${ROLES_MOD}/role/${ROLE_KEY}/diff/${hash}`;
+(async () => {
+  const hash = await postPermissions(permissions);
+  const diffUrl = `${ZODIAC_ROLES_APP}/${CHAIN_PREFIX}:${ROLES_MOD}/role/${ROLE_KEY}/diff/${hash}`;
 
-console.log(`Permission diff page: ${diffUrl}`);
+  console.log(`Permission diff page: ${diffUrl}`);
+})();
