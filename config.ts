@@ -6,4 +6,4 @@ export const CHAIN_PREFIX = "arb1";
 
 export const ROLES_MOD = "0xd8C71bE42ae496286b8b75929F9Cec967ADE7455";
 
-export const ROLE_KEY = formatBytes32String("ARC");
+export const ROLE_KEY = "arc";

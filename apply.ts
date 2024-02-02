@@ -33,7 +33,7 @@ const postPermissions = async (
 
 (async () => {
   const hash = await postPermissions(permissions);
-  const diffUrl = `${ZODIAC_ROLES_APP}/${CHAIN_PREFIX}:${ROLES_MOD}/role/${ROLE_KEY}/diff/${hash}`;
+  const diffUrl = `${ZODIAC_ROLES_APP}/${CHAIN_PREFIX}:${ROLES_MOD}/roles/${ROLE_KEY}/diff/${hash}`;
 
   console.log(`Permission diff page: ${diffUrl}`);
 })();
