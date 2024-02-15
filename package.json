@@ -4,6 +4,9 @@
   "repository": "https://github.com/gnosisguild/treasure-arc-roles.git",
   "author": "Jan-Felix <jfschwarz@users.noreply.github.com>",
   "license": "MIT",
+  "engines": {
+    "node": "^18.0.0"
+  },
   "private": true,
   "scripts": {
     "postinstall": "yarn eth-sdk",
