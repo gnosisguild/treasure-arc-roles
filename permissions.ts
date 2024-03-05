@@ -23,14 +23,17 @@ export const permissions = [
 
   allow.snapshotSigner.signSnapshotVote(
     snapshotVoteConstraints,
-    snapshotDomainConstraints
+    snapshotDomainConstraints,
+    { delegatecall: true }
   ),
   allow.snapshotSigner.signSnapshotArrayVote(
     snapshotVoteConstraints,
-    snapshotDomainConstraints
+    snapshotDomainConstraints,
+    { delegatecall: true }
   ),
   allow.snapshotSigner.signSnapshotStringVote(
     snapshotVoteConstraints,
-    snapshotDomainConstraints
+    snapshotDomainConstraints,
+    { delegatecall: true }
   ),
 ] satisfies Permission[];
