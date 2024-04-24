@@ -4,7 +4,13 @@ import {
   checkIntegrity,
   processPermissions,
 } from "zodiac-roles-sdk";
-import { CHAIN_PREFIX, ROLES_MOD, ROLE_KEY, ZODIAC_ROLES_APP } from "./config";
+import {
+  CHAIN_PREFIX,
+  OWNER_SAFE,
+  ROLES_MOD,
+  ROLE_KEY,
+  ZODIAC_ROLES_APP,
+} from "./config";
 import { permissions } from "./permissions";
 
 /**
@@ -34,6 +40,9 @@ const postPermissions = async (
 (async () => {
   const hash = await postPermissions(permissions);
   const diffUrl = `${ZODIAC_ROLES_APP}/${CHAIN_PREFIX}:${ROLES_MOD}/roles/${ROLE_KEY}/diff/${hash}`;
+  const safeAppUrl = `https://app.safe.global/apps/open?safe=${CHAIN_PREFIX}:${OWNER_SAFE}&appUrl=${encodeURIComponent(
+    diffUrl
+  )}`;
 
-  console.log(`Permission diff page: ${diffUrl}`);
+  console.log(`Follow this link to apply: ${safeAppUrl}`);
 })();
