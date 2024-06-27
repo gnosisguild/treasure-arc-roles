@@ -21,6 +21,10 @@ export const permissions = [
   allow.treasuryGovernor.castVoteWithReason(),
   allow.treasuryGovernor.castVoteWithReasonAndParams(),
 
+  allow.securityCouncilElectionGovernor.castVote(),
+  allow.securityCouncilElectionGovernor.castVoteWithReason(),
+  allow.securityCouncilElectionGovernor.castVoteWithReasonAndParams(),
+
   allow.snapshotSigner.signSnapshotVote(
     snapshotVoteConstraints,
     snapshotDomainConstraints,
