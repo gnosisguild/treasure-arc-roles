@@ -5,7 +5,7 @@ export default defineConfig({
     arbitrumOne: {
       coreGovernor: "0xf07DeD9dC292157749B6Fd268E37DF6EA38395B9",
       treasuryGovernor: "0x789fC99093B09aD01C34DC7251D0C89ce743e5a4",
-      snapshotSigner: "0xb0382209806345d27dFdAB5Bbc17B2AB553165ac",
+      snapshotSigner: "0xa58Cf66d0f14AEFb2389c6998f6ad219dd4885c1",
     },
   },
 });
