@@ -1,4 +1,4 @@
-import { defineConfig } from "@dethcrypto/eth-sdk";
+import { defineConfig } from "@gnosis-guild/eth-sdk";
 
 export default defineConfig({
   contracts: {
@@ -7,7 +7,7 @@ export default defineConfig({
       treasuryGovernor: "0x789fC99093B09aD01C34DC7251D0C89ce743e5a4",
       securityCouncilElectionGovernor:
         "0x467923b9ae90bdb36ba88eca11604d45f13b712c",
-      snapshotSigner: "0xD88504B3e646454D6d458dd610B6c351d7bcAA0f",
+      snapshotSigner: "0xAb4B9080743F1ba17402793B5A3be2FE47a2B821",
     },
   },
 });

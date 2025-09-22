@@ -1,7 +1,7 @@
 import {
   Permission,
   PermissionSet,
-  checkIntegrity,
+  targetIntegrity,
   processPermissions,
 } from "zodiac-roles-sdk";
 import {
@@ -22,7 +22,7 @@ const postPermissions = async (
 ) => {
   const awaitedPermissions = await Promise.all(permissions);
   const { targets, annotations } = processPermissions(awaitedPermissions);
-  checkIntegrity(targets);
+  targetIntegrity(targets);
 
   const res = await fetch(`${ZODIAC_ROLES_APP}/api/permissions`, {
     method: "POST",

@@ -6,7 +6,6 @@ const allow = allowKit.arbitrumOne;
 const snapshotVoteConstraints = {
   from: "0x0eB5B03c0303f2F47cD81d7BE4275AF8Ed347576",
   space: "arbitrumfoundation.eth",
-  app: c.or("snapshot", "snapshot-v2"),
 };
 const snapshotDomainConstraints = {
   name: "snapshot",
